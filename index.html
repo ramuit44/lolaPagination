@@ -1,0 +1,12 @@
+<div ng-controller="connectionProfile.connectionProfileDealsCtrl" ng-init="init()" ng-app="macApp">
+	<div class="panel panel-default">
+		<div class="panel-body"  ng-show="activeDealTableParams.data.length > 0">
+			<table ng-table="activeDealTableParams" class="table"  template-pagination="app/views/templates/lolaPaginationTemplate.html">
+		        <tr ng-repeat="row in $data">
+					<td>{{row.dealId}}
+				</tr>
+		      </table>		      
+		</div>
+		<div class="panel-body empty-table" ng-show="activeDealTableParams.data.length == 0">There are no Active Deals for this connection.</div>
+	</div>
+</div>	

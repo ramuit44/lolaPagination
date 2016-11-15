@@ -1,0 +1,4 @@
+<div class="lola-pagination-header">
+ 		Showing {{((params.page() - 1) * params.count()) + 1}}-{{params.count() * params.page() > params.total() ? params.total() : params.count() * params.page()}} of {{params.total()}} past deals
+</div>
+<div ng-include="'ng-table/pager.html'" class="lola-pager"></div>
